@@ -1,0 +1,199 @@
+@font-face {
+    font-family: Fraunces;
+    src: url(./Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Fraunces;
+}
+
+:root {
+    --button: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cream);
+}
+
+.card {
+    max-width: 700px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--White);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card .img {
+    position: relative;
+    width: 50%;
+}
+
+.img .desktop-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.img .mobile-pic {
+    width: 100%;
+    border-radius: 5px;
+    display: none;
+}
+
+.card .card-details {
+    padding: 20px;
+    width: 50%;
+    padding-top: 40px;
+}
+
+.card-details .perfume {
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    color: rgb(96, 96, 96);
+    padding-bottom: 20px;
+}
+
+.card-details h1 {
+    font-size: 3.8rem;
+    padding-bottom: 25px;
+}
+
+.card-details p {
+    font-size: 1.7rem;
+    color: rgb(96, 96, 96);
+    padding-bottom: 20px;
+}
+
+.card-details .price {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 35px;
+}
+
+.price h2 {
+    font-size: 2.8rem;
+    color: var(--button);
+}
+
+.price .old-price {
+    font-size: 1.6rem;
+    text-decoration: line-through;
+    padding: 0;
+}
+
+.card-details button {
+    width: 95%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 5px;
+    color: var(--White);
+    background-color: var(--button);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.card-details button:hover {
+    background-color: hsl(158, 71%, 20%);
+    cursor: pointer;
+}
+
+
+@media(max-width: 700px) {
+    .card {
+        margin-top: 10%;
+        flex-direction: column;
+        width: 350px;
+        height: 20%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .card .img {
+        width: 100%;
+    }
+
+    .card .desktop-pic {
+        width: 100%;
+    }
+
+    .card .card-details {
+        width: 100%;
+    }
+}
+
+@media(max-width: 376px) {
+    .card {
+        flex-direction: column;
+        width: 320px;
+    }
+
+    .img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-details .perfume {
+        letter-spacing: 1px;
+        font-size: 1.4rem;
+        color: rgb(96, 96, 96);
+        padding-bottom: 15px;
+        margin-top: -10px;
+    }
+
+    .card-details h1 {
+        font-size: 2.8rem;
+        padding-bottom: 15px;
+    }
+
+    .card-details p {
+        font-size: 1.7rem;
+        color: rgb(96, 96, 96);
+        padding-bottom: 15px;
+    }
+
+    .price {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding-bottom: 15px;
+        justify-content: center;
+        padding-right: 20px;
+    }
+
+    .img .desktop-pic {
+        display: none;
+    }
+
+    .img .mobile-pic {
+        display: block;
+        width: 100%;
+        height: 30vh;
+    }
+}
